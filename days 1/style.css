@@ -1,0 +1,157 @@
+/* root variable */
+:root{
+    --primary-color: #4daf54
+}
+
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, #4daf54, #3d8880);
+    font-family: "Poppins", sans-serif;
+}
+
+/* card */
+.card{
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: #272D3F;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+/* card icon */
+.card__heart, .card__cart{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    left: 20px;
+    cursor: pointer;
+}
+.card__cart{
+    left: unset;
+    right: 20px;
+}
+
+/* card image */
+.card__image{
+    width: 90%;
+    transition: 0.5s;
+}
+.card__image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* card product */
+.card__title, .card__price{
+    text-align: center;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.card__title{
+    color: var(--primary-color)
+}
+.card__price{
+    color: white;
+    font-size: 25px;
+}
+
+/* card size + card color */
+.card__size, .card__color{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.card__size h3, .card__color h3{
+    color: white;
+    font-weight: 600;
+}
+
+.card__size span{
+    background-color: #dadada;
+    padding: 2px 8px;
+    border-radius: 10%;
+    color: black;
+    cursor: pointer;
+}
+
+.color__green, .color__red, .color__black{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color__green{
+    background-color: green;
+}
+
+.color__red{
+    background-color: red;
+}
+
+.color__black{
+    background-color: black;
+}
+
+/* card action */
+.card__action button{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+/* card animation */
+.card:hover .card__image{
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card__title{
+    transform: translate(-45px, -70px);
+}
+.card:hover .card__price{
+    transform: translate(-115px, -70px);
+}
+
+.card__size{
+    margin-top: 150px;
+}
+
+.card__size, .card__color, .card__action{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.card:hover .card__size, 
+.card:hover .card__color,
+.card:hover .card__action
+{
+    visibility:visible ;
+    opacity: 100;
+} 
+
+.card:hover .card__size{
+    margin-top: -30px;
+}
+
+.card__action button:hover{
+    transform: scale(0.9);
+}
