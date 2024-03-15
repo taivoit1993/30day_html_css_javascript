@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #17a2b8;
+  --secondary-color: #78c0c9;
+}
+
+/* Body */
+body {
+  background-color: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* button press */
+.btn-press button {
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  font-size: 45px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.5 ease-out;
+}
+
+.keypress-detect {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 100px;
+  transition: all 0.5 ease-in;
+}
+
+.keypress-detect__number {
+  font-size: 90px;
+  padding: 70px;
+  font-weight: bold;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.list-card {
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+
+}
+.card {
+  width: 300px;
+  height: 50px;
+}
+
+.keypress-detect__card {
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.keypress-detect__card > .card__title {
+  background-color: var(--secondary-color);
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+.keypress-detect__card > .card__body {
+  padding: 10px 0;
+  font-size: 25px;
+  color: black;
+}
+
+.hidden{
+    display: none;
+}
