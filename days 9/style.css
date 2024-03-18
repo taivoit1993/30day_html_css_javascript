@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* css body */
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+    url("./img/hot.png") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.weather {  
+  width: 350px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: url("./img/hot.png") no-repeat center / cover ;
+  text-align: center;
+  gap: 35px;
+}
+
+.weather__search input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 0 10px 0 10px;
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  transition: 0.5s ease;
+}
+
+.weather__search input:focus {
+  border-radius: 10px 0 10px 0;
+  background: rgba(255, 255, 255, 1);
+}
+
+.weather__title{
+    display: flex;
+    flex-direction: column;
+}
+
+.weather__title .primary__title{
+    display: inline-flex;
+    justify-content: center;
+    
+}
+
+.weather__title .primary__title h1{
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.weather__temperature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather__temperature h1{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 5px 15px;
+    font-size: 55px;
+    text-shadow: 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.weather__climate{
+    font-size: 20px;
+    text-shadow: 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.weather__info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weather__info li{
+    list-style: none;
+    flex: 0 0 33.333333%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
