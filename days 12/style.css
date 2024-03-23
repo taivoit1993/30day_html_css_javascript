@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* css variable */
+:root {
+  --success: rgb(51, 115, 87);
+  --warning: rgb(255, 210, 63);
+  --error: rgb(238, 66, 102);
+
+  --success-light: rgba(51, 115, 87, 0.7);
+  --warning-light: rgba(255, 210, 63, 0.7);
+  --error-light: rgba(238, 66, 102, 0.7);
+}
+
+/* reset layout */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control {
+  color: white;
+}
+
+.control button {
+  color: white;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 8px;
+  font-size: 25px;
+  border-radius: 5px;
+  box-shadow: 5px 5px #d9d9d9;
+  cursor: pointer;
+}
+
+.control .success {
+  background-color: var(--success);
+}
+.control .warning {
+  background-color: var(--warning);
+}
+.control .error {
+  background-color: var(--error);
+}
+
+/* CSS Toast */
+
+.control .toasts {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.control .toast {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  animation: slideshow 2s ease forwards;
+  transition: all 1s linear;
+}
+
+.toast .timeline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    animation: timeline 4s ease-in forwards;
+  }
+
+/* toast success */
+
+.toast.toast--success{
+    background-color: var(--success-light);
+    border-left: 3px solid var(--success);
+}
+
+.toast.toast--success .timeline {
+    background-color: var(--success);
+}
+
+/* toast warning */
+.toast.toast--warning{
+    background-color: var(--warning-light);
+    border-left: 3px solid var(--warning);
+}
+
+.toast.toast--warning .timeline {
+    background-color: var(--warning);
+}
+
+/* toast error */
+.toast.toast--error{
+    background-color: var(--error-light);
+    border-left: 3px solid var(--error);
+}
+
+.toast.toast--error .timeline {
+    background-color: var(--error);
+}
+
+
+@keyframes timeline {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes slidehide {
+    0% {
+      transform: translateX(-10px);
+    }
+    40% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
