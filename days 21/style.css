@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body{
+    height: 100vh;
+}
+
+.container{
+    height: 100%;
+}
+.tool-lst{
+    height: 50px;
+    background-color: cornflowerblue;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.tool-lst .tool{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    background-color: #efefef;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tool i{
+    font-size: 15px;
+}
+a.tool{
+    text-decoration: none;
+
+}
+
+.tool-left, .tool-right{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.drawing-wrapper{
+    width: 100%;
+}
+
+#myCanvas{
+    margin: 0 auto;
+    display: block;
+}

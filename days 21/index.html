@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Drawing</title>
+</head>
+<body>
+    <!-- Drawing Start -->
+    <div class="container">
+        <div class="tool-lst">
+            <div class="tool-left">
+                <input class="tool color" type="color" name="" id="">
+                <button class="tool eraser"><i class='bx bxs-eraser'></i></button>
+                <button class="tool plus"><i class='bx bx-plus'></i></button>
+                <button class="tool size">20</button>
+                <button class="tool minus"><i class='bx bx-minus' ></i></button>
+            </div>
+            <div class="tool-right">
+                <a class="tool save" download="example.png"><i class='bx bxs-save' ></i></a>
+                <button class="tool clean"><i class='bx bx-folder-minus'></i></button>
+            </div>
+        </div>
+        <div class="drawing-wrapper">
+            <canvas id="myCanvas" width="1200" height="800" style="border:1px solid #000000;">
+            </canvas>
+        </div>
+    </div>
+    <!-- Drawing End -->
+    <script src="./app.js"></script>
+</body>
+</html>
