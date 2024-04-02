@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #13005A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: #03C988;
+    font-size: 70px;
+    border-right: 10px solid #03C988;
+    white-space: nowrap;
+    overflow: hidden;
+
+    animation: blink 1s ease-in-out infinite;
+    text-shadow: 0 0 1000px #03C988;
+}
+
+@keyframes blink {
+    0%, 100%{
+        border-right: 10px solid #03C988;
+        
+    }
+    50%{
+        border-right: 10px solid transparent
+    }
+    100%{}
+}
+
+/* @keyframes typing {
+    0%, 100%{
+        width: 0%;
+    }
+    80%{
+        width: 100%;
+    }
+} */
